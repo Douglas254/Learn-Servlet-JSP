@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -20,10 +21,11 @@ public class AddServlet extends HttpServlet {
 		// add variable i and j
 		int k = i + j;
 
-		// using HttpSession
-		HttpSession session = req.getSession();
-		session.setAttribute("k", k);
-
+		// using cookie
+		Cookie cookie = new Cookie("k", k + "");
+		res.addCookie(cookie);
+		
+		// call SqServlet
 		res.sendRedirect("Sq");
 	}
 }
