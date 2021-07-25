@@ -8,6 +8,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class AddServlet extends HttpServlet {
 	// we can use the doGet or doPost method in place of the service method
@@ -19,6 +20,10 @@ public class AddServlet extends HttpServlet {
 		// add variable i and j
 		int k = i + j;
 
-		res.sendRedirect("Sq?k=" + k); // URL Rewriting
+		// using HttpSession
+		HttpSession session = req.getSession();
+		session.setAttribute("k", k);
+
+		res.sendRedirect("Sq");
 	}
 }
