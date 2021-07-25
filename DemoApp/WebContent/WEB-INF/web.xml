@@ -25,4 +25,24 @@
 		<url-pattern>/Sq</url-pattern>
 	</servlet-mapping>
 
+	<servlet>
+		<servlet-name>MyServlet</servlet-name>
+		<servlet-class>com.douglas254.MyServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>MyServlet</servlet-name>
+		<url-pattern>/home</url-pattern>
+	</servlet-mapping>
+
+	<context-param>
+		<param-name>name</param-name>
+		<param-value>Douglas</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>phone</param-name>
+		<param-value>Iphone</param-value>
+	</context-param>
+
 </web-app>
