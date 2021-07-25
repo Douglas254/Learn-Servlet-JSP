@@ -8,7 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class AddServlet extends HttpServlet {
-	public void service(HttpServletRequest req, HttpServletResponse res) throws IOException {
+	// we can use the doGet or doPost method in place of the service method
+	public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
 		// get inputs from the client form and store in a variable
 		int i = Integer.parseInt(req.getParameter("num1"));
 		int j = Integer.parseInt(req.getParameter("num2"));
