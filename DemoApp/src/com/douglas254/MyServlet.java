@@ -3,6 +3,7 @@ package com.douglas254;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -15,10 +16,10 @@ public class MyServlet extends HttpServlet {
 
 		// getting the name of web.xml context-param value using ServletContext
 		// servletContext is good if you have multiple servlets which will share the same value
-		ServletContext ctx = getServletContext();
+		ServletConfig cg = getServletConfig();
 
 		// fetch servlet context object
-		String str = ctx.getInitParameter("name");
+		String str = cg.getInitParameter("name");
 
 		out.println(str);
 

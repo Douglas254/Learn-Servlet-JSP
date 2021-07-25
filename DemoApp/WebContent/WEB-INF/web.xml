@@ -28,6 +28,12 @@
 	<servlet>
 		<servlet-name>MyServlet</servlet-name>
 		<servlet-class>com.douglas254.MyServlet</servlet-class>
+		
+		<init-param>
+			<param-name>name</param-name>
+			<param-value>Douglas Obara</param-value>
+		</init-param>
+		
 	</servlet>
 
 	<servlet-mapping>
