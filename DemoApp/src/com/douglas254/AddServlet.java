@@ -19,15 +19,6 @@ public class AddServlet extends HttpServlet {
 		// add variable i and j
 		int k = i + j;
 
-		// setting the value of k so that it can be fetched from the SqServlet
-		req.setAttribute("k", k);
-
-		// two ways of calling a servlet
-		// 1. RequestDispatcher
-		// 2. sendRedirect
-
-		// using RequestDispatcher to call SqServlet
-		RequestDispatcher rd = req.getRequestDispatcher("Sq");
-		rd.forward(req, res);
+		res.sendRedirect("Sq?k=" + k); // URL Rewriting
 	}
 }

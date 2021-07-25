@@ -9,10 +9,9 @@ import javax.servlet.http.HttpServletResponse;
 
 public class SqServlet extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
-		// fetching the value of k from the AddServlet and cast it to an integer because
-		// it return object of an object
-		int k = (int) req.getAttribute("k");
 
+		int k = Integer.parseInt(req.getParameter("k"));
+		
 		// calculate square of a number
 		k = k * k;
 
