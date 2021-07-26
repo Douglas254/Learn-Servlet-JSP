@@ -8,13 +8,13 @@
 </head>
 <body bgcolor="cyan">
 
-	<!-- use scriptlet tag -->
+	<!-- use scriptlet tags to inject in the service() method -->
 	<%
-		int i = Integer.parseInt(request.getParameter("num1"));
-		int j = Integer.parseInt(request.getParameter("num2"));
+		int a = Integer.parseInt(request.getParameter("num1"));
+		int b = Integer.parseInt(request.getParameter("num2"));
 
-		int k = i + j;
-		out.print("Output : " + k);
+		int result = a + b;
+		out.print("Output : " + result);
 	%>
 
 </body>
